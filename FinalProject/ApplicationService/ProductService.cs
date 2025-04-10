@@ -8,6 +8,6 @@ namespace ApplicationService
 {
     class ProductService
     {
-
+        private readonly 
     }
 }

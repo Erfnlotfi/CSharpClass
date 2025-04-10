@@ -23,5 +23,15 @@ namespace view
             form1.Show();
             this.Hide();
         }
+
+        private void txtFirstName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

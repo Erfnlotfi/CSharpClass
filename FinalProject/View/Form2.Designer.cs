@@ -55,6 +55,7 @@
             btnAdd.TabIndex = 0;
             btnAdd.Text = "Add";
             btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += btnAdd_Click;
             // 
             // btnEdit
             // 
@@ -113,6 +114,7 @@
             txtFirstName.Name = "txtFirstName";
             txtFirstName.Size = new Size(291, 27);
             txtFirstName.TabIndex = 6;
+            txtFirstName.TextChanged += txtFirstName_TextChanged;
             // 
             // txtLastName
             // 
