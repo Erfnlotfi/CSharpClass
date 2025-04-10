@@ -48,45 +48,50 @@
             // 
             // btnAdd
             // 
-            btnAdd.Location = new Point(87, 19);
+            btnAdd.Location = new Point(99, 25);
+            btnAdd.Margin = new Padding(3, 4, 3, 4);
             btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(90, 37);
+            btnAdd.Size = new Size(103, 49);
             btnAdd.TabIndex = 0;
             btnAdd.Text = "Add";
             btnAdd.UseVisualStyleBackColor = true;
             // 
             // btnEdit
             // 
-            btnEdit.Location = new Point(222, 19);
+            btnEdit.Location = new Point(254, 25);
+            btnEdit.Margin = new Padding(3, 4, 3, 4);
             btnEdit.Name = "btnEdit";
-            btnEdit.Size = new Size(90, 37);
+            btnEdit.Size = new Size(103, 49);
             btnEdit.TabIndex = 1;
             btnEdit.Text = "Edit";
             btnEdit.UseVisualStyleBackColor = true;
             // 
             // btnDelete
             // 
-            btnDelete.Location = new Point(372, 19);
+            btnDelete.Location = new Point(425, 25);
+            btnDelete.Margin = new Padding(3, 4, 3, 4);
             btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(90, 37);
+            btnDelete.Size = new Size(103, 49);
             btnDelete.TabIndex = 2;
             btnDelete.Text = "Delete";
             btnDelete.UseVisualStyleBackColor = true;
             // 
             // btnRefresh
             // 
-            btnRefresh.Location = new Point(520, 19);
+            btnRefresh.Location = new Point(594, 25);
+            btnRefresh.Margin = new Padding(3, 4, 3, 4);
             btnRefresh.Name = "btnRefresh";
-            btnRefresh.Size = new Size(90, 37);
+            btnRefresh.Size = new Size(103, 49);
             btnRefresh.TabIndex = 3;
             btnRefresh.Text = "Refresh";
             btnRefresh.UseVisualStyleBackColor = true;
             // 
             // btnBack
             // 
-            btnBack.Location = new Point(677, 19);
+            btnBack.Location = new Point(774, 25);
+            btnBack.Margin = new Padding(3, 4, 3, 4);
             btnBack.Name = "btnBack";
-            btnBack.Size = new Size(90, 37);
+            btnBack.Size = new Size(103, 49);
             btnBack.TabIndex = 4;
             btnBack.Text = "Back";
             btnBack.UseVisualStyleBackColor = true;
@@ -95,48 +100,51 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(87, 126);
+            label1.Location = new Point(99, 168);
             label1.Name = "label1";
-            label1.Size = new Size(70, 15);
+            label1.Size = new Size(87, 20);
             label1.TabIndex = 5;
             label1.Text = "First Name :";
             // 
             // txtFirstName
             // 
-            txtFirstName.Location = new Point(176, 123);
+            txtFirstName.Location = new Point(201, 164);
+            txtFirstName.Margin = new Padding(3, 4, 3, 4);
             txtFirstName.Name = "txtFirstName";
-            txtFirstName.Size = new Size(255, 23);
+            txtFirstName.Size = new Size(291, 27);
             txtFirstName.TabIndex = 6;
             // 
             // txtLastName
             // 
-            txtLastName.Location = new Point(176, 180);
+            txtLastName.Location = new Point(201, 240);
+            txtLastName.Margin = new Padding(3, 4, 3, 4);
             txtLastName.Name = "txtLastName";
-            txtLastName.Size = new Size(255, 23);
+            txtLastName.Size = new Size(291, 27);
             txtLastName.TabIndex = 8;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(87, 183);
+            label2.Location = new Point(99, 244);
             label2.Name = "label2";
-            label2.Size = new Size(69, 15);
+            label2.Size = new Size(86, 20);
             label2.TabIndex = 7;
             label2.Text = "Last Name :";
             // 
             // txtNationalId
             // 
-            txtNationalId.Location = new Point(176, 238);
+            txtNationalId.Location = new Point(201, 317);
+            txtNationalId.Margin = new Padding(3, 4, 3, 4);
             txtNationalId.Name = "txtNationalId";
-            txtNationalId.Size = new Size(255, 23);
+            txtNationalId.Size = new Size(291, 27);
             txtNationalId.TabIndex = 10;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(87, 241);
+            label3.Location = new Point(99, 321);
             label3.Name = "label3";
-            label3.Size = new Size(71, 15);
+            label3.Size = new Size(90, 20);
             label3.TabIndex = 9;
             label3.Text = "National Id :";
             // 
@@ -144,31 +152,39 @@
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { dgvFirstName, dgvLastName, dgvNationalId });
-            dataGridView1.Location = new Point(492, 123);
+            dataGridView1.Location = new Point(562, 164);
+            dataGridView1.Margin = new Padding(3, 4, 3, 4);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(342, 138);
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(391, 184);
             dataGridView1.TabIndex = 11;
             // 
             // dgvFirstName
             // 
             dgvFirstName.HeaderText = "First Name";
+            dgvFirstName.MinimumWidth = 6;
             dgvFirstName.Name = "dgvFirstName";
+            dgvFirstName.Width = 125;
             // 
             // dgvLastName
             // 
             dgvLastName.HeaderText = "Last Name";
+            dgvLastName.MinimumWidth = 6;
             dgvLastName.Name = "dgvLastName";
+            dgvLastName.Width = 125;
             // 
             // dgvNationalId
             // 
             dgvNationalId.HeaderText = "National Id";
+            dgvNationalId.MinimumWidth = 6;
             dgvNationalId.Name = "dgvNationalId";
+            dgvNationalId.Width = 125;
             // 
             // Form2
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1044, 450);
+            ClientSize = new Size(997, 600);
             Controls.Add(dataGridView1);
             Controls.Add(txtNationalId);
             Controls.Add(label3);
@@ -181,6 +197,7 @@
             Controls.Add(btnDelete);
             Controls.Add(btnEdit);
             Controls.Add(btnAdd);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Form2";
             Text = "Form2";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
