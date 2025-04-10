@@ -1,15 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Model.DomainModel
+namespace ApplicationService.DTOs
 {
-    public class Person
+    class GetPersonDTO
     {
-        [Key]
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public int NationalId { get; set; }
