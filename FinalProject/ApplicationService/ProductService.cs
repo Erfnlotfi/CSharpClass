@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace ApplicationService
 {
-    class ProductService
+    public class ProductService
     {
-        private readonly 
+        
     }
 }

@@ -8,9 +8,29 @@ using Model.ServiceModel;
 using ApplicationService.DTOs;
 namespace ApplicationService
 {
-    class PersonService
+    public class PersonService
     {
      private readonly PersonServiceModel _personServiceModel;
+        public PersonService()
+        {
+            _personServiceModel = new PersonServiceModel();
+        }
+        public List<Person> GetAll()
+        {
+            var persons = _personServiceModel.SelectAll();
+            var getPersonDto=new List<GetPersonDTO>();
+            foreach (var item in persons)
+            {
+                var gpd = new GetPersonDTO()
+                {
+                    FirstName = item.FirstName,
+                    LastName = item.LastName,
+                    NationalId = item.NationalId,
+                };
+                getPersonDto.Add(gpd);
+            }
+            return persons;
+        }
 
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ApplicationService.DTOs
 {
-    class GetPersonDTO
+    public class GetPersonDTO
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }

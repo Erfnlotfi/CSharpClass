@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             btnAdd = new Button();
             btnEdit = new Button();
             btnDelete = new Button();
@@ -43,7 +44,12 @@
             dgvFirstName = new DataGridViewTextBoxColumn();
             dgvLastName = new DataGridViewTextBoxColumn();
             dgvNationalId = new DataGridViewTextBoxColumn();
+            personBindingSource = new BindingSource(components);
+            firstNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            lastNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            nationalIdDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)personBindingSource).BeginInit();
             SuspendLayout();
             // 
             // btnAdd
@@ -86,6 +92,7 @@
             btnRefresh.TabIndex = 3;
             btnRefresh.Text = "Refresh";
             btnRefresh.UseVisualStyleBackColor = true;
+            btnRefresh.Click += btnRefresh_Click;
             // 
             // btnBack
             // 
@@ -152,11 +159,14 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.AutoGenerateColumns = false;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { dgvFirstName, dgvLastName, dgvNationalId });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { dgvFirstName, dgvLastName, dgvNationalId, firstNameDataGridViewTextBoxColumn, lastNameDataGridViewTextBoxColumn, nationalIdDataGridViewTextBoxColumn });
+            dataGridView1.DataSource = personBindingSource;
             dataGridView1.Location = new Point(562, 164);
             dataGridView1.Margin = new Padding(3, 4, 3, 4);
             dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(391, 184);
             dataGridView1.TabIndex = 11;
@@ -166,6 +176,7 @@
             dgvFirstName.HeaderText = "First Name";
             dgvFirstName.MinimumWidth = 6;
             dgvFirstName.Name = "dgvFirstName";
+            dgvFirstName.ReadOnly = true;
             dgvFirstName.Width = 125;
             // 
             // dgvLastName
@@ -173,6 +184,7 @@
             dgvLastName.HeaderText = "Last Name";
             dgvLastName.MinimumWidth = 6;
             dgvLastName.Name = "dgvLastName";
+            dgvLastName.ReadOnly = true;
             dgvLastName.Width = 125;
             // 
             // dgvNationalId
@@ -180,7 +192,39 @@
             dgvNationalId.HeaderText = "National Id";
             dgvNationalId.MinimumWidth = 6;
             dgvNationalId.Name = "dgvNationalId";
+            dgvNationalId.ReadOnly = true;
             dgvNationalId.Width = 125;
+            // 
+            // personBindingSource
+            // 
+            personBindingSource.DataSource = typeof(Model.DomainModel.Person);
+            // 
+            // firstNameDataGridViewTextBoxColumn
+            // 
+            firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
+            firstNameDataGridViewTextBoxColumn.HeaderText = "FirstName";
+            firstNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
+            firstNameDataGridViewTextBoxColumn.ReadOnly = true;
+            firstNameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // lastNameDataGridViewTextBoxColumn
+            // 
+            lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
+            lastNameDataGridViewTextBoxColumn.HeaderText = "LastName";
+            lastNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
+            lastNameDataGridViewTextBoxColumn.ReadOnly = true;
+            lastNameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // nationalIdDataGridViewTextBoxColumn
+            // 
+            nationalIdDataGridViewTextBoxColumn.DataPropertyName = "NationalId";
+            nationalIdDataGridViewTextBoxColumn.HeaderText = "NationalId";
+            nationalIdDataGridViewTextBoxColumn.MinimumWidth = 6;
+            nationalIdDataGridViewTextBoxColumn.Name = "nationalIdDataGridViewTextBoxColumn";
+            nationalIdDataGridViewTextBoxColumn.ReadOnly = true;
+            nationalIdDataGridViewTextBoxColumn.Width = 125;
             // 
             // Form2
             // 
@@ -203,6 +247,7 @@
             Name = "Form2";
             Text = "Form2";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)personBindingSource).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -224,5 +269,9 @@
         private DataGridViewTextBoxColumn dgvFirstName;
         private DataGridViewTextBoxColumn dgvLastName;
         private DataGridViewTextBoxColumn dgvNationalId;
+        private DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn nationalIdDataGridViewTextBoxColumn;
+        private BindingSource personBindingSource;
     }
 }

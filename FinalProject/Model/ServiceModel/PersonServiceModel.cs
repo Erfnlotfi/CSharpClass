@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Model.ServiceModel
 {
-    class PersonServiceModel
+   public class PersonServiceModel
     {
         public List<Person> SelectAll()
         {

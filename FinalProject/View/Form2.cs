@@ -1,4 +1,7 @@
-﻿using System;
+﻿using ApplicationService;
+using Model.DomainModel;
+using Model.ServiceModel;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +15,11 @@ namespace view
 {
     public partial class Form2 : Form
     {
+        private readonly PersonService _personService;
         public Form2()
         {
             InitializeComponent();
+            _personService = new PersonService();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -31,7 +36,13 @@ namespace view
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-           
+
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = _personService.GetAll();
+            MessageBox.Show("Done!");
         }
     }
 }
